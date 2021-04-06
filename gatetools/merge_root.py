@@ -40,11 +40,7 @@ def merge_root(rootfiles, outputfile, incrementRunId=False):
     """
     Merge root files in output files
     """
-    try:
-        import uproot3 as uproot
-    except:
-        print("uproot3 is mandatory to merge root file. Please, do:")
-        print("pip install uproot3")
+    import uproot
 
     out = uproot.recreate(outputfile)
 
@@ -100,11 +96,7 @@ from .logging_conf import LoggedTestCase
 
 class Test_MergeRoot(LoggedTestCase):
     def test_merge_root_phsp(self):
-        try:
-            import uproot3 as uproot
-        except:
-            print("uproot3 is mandatory to merge root file. Please, do:")
-            print("pip install uproot3")
+        import uproot
 
         logger.info('Test_MergeRoot test_merge_root_phsp')
         tmpdirpath = tempfile.mkdtemp()
@@ -122,11 +114,7 @@ class Test_MergeRoot(LoggedTestCase):
         shutil.rmtree(tmpdirpath)
 
     def test_merge_root_pet_incrementEvent(self):
-        try:
-            import uproot3 as uproot
-        except:
-            print("uproot3 is mandatory to merge root file. Please, do:")
-            print("pip install uproot3")
+        import uproot
 
         logger.info('Test_MergeRoot test_merge_root_pet')
         tmpdirpath = tempfile.mkdtemp()
@@ -147,11 +135,7 @@ class Test_MergeRoot(LoggedTestCase):
         shutil.rmtree(tmpdirpath)
 
     def test_merge_root_pet_incrementRun(self):
-        try:
-            import uproot3 as uproot
-        except:
-            print("uproot3 is mandatory to merge root file. Please, do:")
-            print("pip install uproot3")
+        import uproot
 
         logger.info('Test_MergeRoot test_merge_root_pet')
         tmpdirpath = tempfile.mkdtemp()

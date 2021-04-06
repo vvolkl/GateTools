@@ -32,7 +32,7 @@ def gt_merge_root_main(output, incrementrunid, inputsroot, **kwargs):
 
     gt_merge_root -d output.root root1.root root2.root
 
-    Due to uproot3, it cannot merge TTree with string variables
+    Due to uproot, it cannot merge TTree with string variables
 
     This tool has different behavior to merge Id:
 
